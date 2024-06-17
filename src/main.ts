@@ -31,7 +31,7 @@ const app = createApp(App);
 for (let i in Icons) {
   // 注册全局组件
   // 组件名称为：el-icon-xxx
-  // console.log(`el-icon${toLine(i)}`);
+  console.log(`el-icon${toLine(i)}`);
   app.component(`el-icon${toLine(i)}`, (Icons as any)[i]);
 }
 
