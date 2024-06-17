@@ -1,7 +1,7 @@
 <!--
  * @Author: jsopy
  * @Date: 2024-06-18 06:31:56
- * @LastEditTime: 2024-06-18 07:03:54
+ * @LastEditTime: 2024-06-18 07:48:49
  * @FilePath: /my-vue-app/src/pages/QuShi/index.vue
  * @Description: 趋势标记
  * 
@@ -9,12 +9,16 @@
 
 <template>
   <div>
-    <div class="itembottom">
-      <ChooseQuShi :listdata="listdata"></ChooseQuShi>
-    </div>
-    <div class="itembottom">
-      <ChooseQuShi :listdata="listdata2"></ChooseQuShi>
-    </div>
+    <el-row style="margin-bottom: 20px">
+      <ChooseQuShi :content="content1"></ChooseQuShi>
+
+      <ChooseQuShi :content="content2"></ChooseQuShi>
+    </el-row>
+    <el-row style="margin-bottom: 20px">
+      <ChooseQuShi :content="content3"></ChooseQuShi>
+
+      <ChooseQuShi :content="content4"></ChooseQuShi>
+    </el-row>
   </div>
 </template>
 
@@ -28,41 +32,33 @@ interface item {
   colortext: string;
 }
 
-const updata = ref<item>({
+const content1 = ref<item>({
   title: "涨幅20%",
   coloricon: "#C80000",
   icon: "el-icon-arrow-up-bold",
   colortext: "#C80000",
 });
 
-const downdata = ref<item>({
+const content2 = ref<item>({
   title: "跌幅30%",
   coloricon: "#85C06F",
   icon: "el-icon-arrow-down-bold",
   colortext: "#85C06F",
 });
 
-const listdata = [updata.value, downdata.value];
-
-const updata2 = ref<item>({
+const content4 = ref<item>({
   title: "涨幅60%",
   coloricon: "#C80000",
   icon: "el-icon-arrow-up-bold",
   colortext: "#C80000",
 });
 
-const downdata2 = ref<item>({
+const content3 = ref<item>({
   title: "跌幅10%",
   coloricon: "#85C06F",
   icon: "el-icon-arrow-down-bold",
   colortext: "#85C06F",
 });
-
-const listdata2 = [downdata2.value, updata2.value];
 </script>
 
-<style scoped lang="scss">
-.itembottom {
-  margin-bottom: 20px;
-}
-</style>
+<style scoped lang="scss"></style>
