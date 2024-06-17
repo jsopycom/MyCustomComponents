@@ -1,7 +1,7 @@
 <!--
  * @Author: jsopy
  * @Date: 2024-06-16 20:37:19
- * @LastEditTime: 2024-06-17 07:20:26
+ * @LastEditTime: 2024-06-17 21:52:47
  * @FilePath: /my-vue-app/src/pages/Home/index.vue
  * @Description: 
  * 
@@ -19,7 +19,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import ChooseIcon from "@/components/chooseIcon/index.vue";
+
 const message = ref("选择图标(点击复制)");
 const visibale = ref(false);
 </script>
