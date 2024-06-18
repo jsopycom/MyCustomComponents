@@ -1,7 +1,7 @@
 /*
  * @Author: jsopy
  * @Date: 2024-06-15 21:43:31
- * @LastEditTime: 2024-06-18 21:28:40
+ * @LastEditTime: 2024-06-19 06:38:57
  * @FilePath: /my-vue-app/src/router/index.ts
  * @Description:
  *
@@ -60,6 +60,15 @@ const routes: RouteRecordRaw[] = [
           icon: "el-icon-menu",
         },
         component: () => import("@/pages/BadgeAdvance/index.vue"),
+      },
+      {
+        path: "/chooseProcessBar",
+        name: "chooseProcessBar",
+        meta: {
+          title: "进度条",
+          icon: "el-icon-menu",
+        },
+        component: () => import("@/pages/ProgressBar/index.vue"),
       },
     ],
   },
