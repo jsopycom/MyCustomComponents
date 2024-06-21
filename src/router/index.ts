@@ -1,7 +1,7 @@
 /*
  * @Author: jsopy
  * @Date: 2024-06-15 21:43:31
- * @LastEditTime: 2024-06-19 06:38:57
+ * @LastEditTime: 2024-06-21 19:58:40
  * @FilePath: /my-vue-app/src/router/index.ts
  * @Description:
  *
@@ -69,6 +69,24 @@ const routes: RouteRecordRaw[] = [
           icon: "el-icon-menu",
         },
         component: () => import("@/pages/ProgressBar/index.vue"),
+      },
+      {
+        path: "/chooseTime",
+        name: "chooseProcessBar",
+        meta: {
+          title: "时间选择",
+          icon: "el-icon-menu",
+        },
+        component: () => import("@/pages/Time/index.vue"),
+      },
+      {
+        path: "/chooseDate",
+        name: "chooseDate",
+        meta: {
+          title: "日期选择",
+          icon: "el-icon-menu",
+        },
+        component: () => import("@/pages/Date/index.vue"),
       },
     ],
   },

@@ -1,7 +1,7 @@
 /*
  * @Author: jsopy
  * @Date: 2024-06-17 21:48:12
- * @LastEditTime: 2024-06-19 06:36:33
+ * @LastEditTime: 2024-06-21 19:57:33
  * @FilePath: /my-vue-app/src/components/index.ts
  * @Description:
  *
@@ -23,6 +23,10 @@ import chooseBadgeAdvance from "./choosebadgeadvance";
 
 import chooseProcessBar from "./chooseProcessBar";
 
+import chooseTime from "./chooseTime";
+
+import chooseDate from "./chooseDate";
+
 const components = [
   chooseIcon,
   chooseArea,
@@ -30,7 +34,9 @@ const components = [
   chooseBadge,
   chooseBadgeAdvance,
   chooseTab,
-  chooseProcessBar
+  chooseProcessBar,
+  chooseTime,
+  chooseDate
 ];
 
 export default {
