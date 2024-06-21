@@ -1,7 +1,7 @@
 <!--
  * @Author: jsopy
  * @Date: 2024-06-21 19:35:16
- * @LastEditTime: 2024-06-21 21:46:20
+ * @LastEditTime: 2024-06-22 07:19:37
  * @FilePath: /my-vue-app/src/components/chooseTime/src/index.vue
  * @Description: 
  * 
@@ -41,7 +41,7 @@ const startTime = ref("");
 
 const endTime = ref("");
 
-const emits = defineEmits(["changetimeresult"]);
+const emits = defineEmits(["changetimeresult", "changeflagtimeall"]);
 
 const props = defineProps({
   startDefaultTime: {
@@ -76,9 +76,25 @@ const props = defineProps({
     type: Number,
     default: 10,
   },
+  changetimeflag: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const offsetEndStartTime = ref(props.endDefaultTime);
+
+watch(
+  () => {
+    return props.changetimeflag;
+  },
+  (newval, oldval) => {
+    if (newval) {
+      startTime.value = "";
+      endTime.value = "";
+    }
+  }
+);
 
 watch(
   () => {
@@ -86,6 +102,11 @@ watch(
   },
   (newval, oldval) => {
     if (newval !== "" && newval) {
+      // 关闭
+      emits("changeflagtimeall", false);
+
+      //关闭
+
       let resultTime = newval.split(":");
       let hour = parseInt(resultTime[0]);
       let minute = parseInt(resultTime[1]);
