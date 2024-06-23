@@ -53,10 +53,8 @@ const resulthour = ref("0");
 const handleChangehour = (value: number) => {
   if (value < 10) {
     resulthour.value = "0" + value.toString();
-    console.log(resulthour.value);
   } else {
     resulthour.value = value.toString();
-    console.log(resulthour.value);
   }
   // 清空
   changetimeflag.value = true;
@@ -67,12 +65,8 @@ const resultminute = ref("0");
 const handleChangeMin = (value: number) => {
   if (value < 10) {
     resultminute.value = "0" + value.toString();
-    console.log(resultminute.value);
   } else {
     resultminute.value = value.toString();
-    console.log(resultminute.value);
-    console.log(Number(resulthour.value));
-    console.log(Number(resultminute.value));
   }
   // 清空
   changetimeflag.value = true;
